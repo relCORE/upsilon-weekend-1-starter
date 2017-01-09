@@ -23,11 +23,9 @@ $(function () {
   $('#myTable').on('click', '.deleteRow', function (event) {
     console.log('delete pressed');
 
-        var tdValue = $(this).parent().parent().children(".pay").map(function (index, val) {
-            return $(this).text();
-        }).toArray();
+        var tdValue = $(this).parent().parent().children(".pay").text(); 
         calcSalary(-parseInt(tdValue));
-        console.log(tdValue);
+        // console.log(tdValue);
         $(this).closest ('tr').remove ();
 
     event.preventDefault();
