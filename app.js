@@ -23,9 +23,9 @@ $(function () {
   $('#myTable').on('click', '.deleteRow', function (event) {
     console.log('delete pressed');
 
-        var tdValue = $(this).parent().parent().children(".pay").text();
-        calcSalary(-parseInt(tdValue));
-         console.log(tdValue);
+        var deletedSalary = $(this).parent().parent().children(".pay").text();
+        calcSalary(-parseInt(deletedSalary));
+         console.log("Deleted Employees Annual Salary: " + deletedSalary);
         $(this).closest ('tr').remove ();
 
     event.preventDefault();
@@ -48,6 +48,6 @@ function clearForm() {
 
 function calcSalary(salary) {
   totalSalary += parseInt(salary);
-  console.log(totalSalary);
+  console.log("Total Annual Salaries: " + totalSalary);
   $('#salaryTable td:last').text(Math.round((totalSalary)/12));
 }
