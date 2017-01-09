@@ -17,12 +17,43 @@
       <input type="text" id="employeeLastName" name="employeeLastName" />
       <label for="employeeIdNumber">ID Number</label>
       <input type="text" name="employeeIdNumber" />
+      <label for="employeeJobTitle">Job Title</label>
+      <input type="text" name="employeeJobTitle" />
+      <label for="employeeSalary">Salary</label>
+      <input type="text" name="employeeSalary" />
       <input type="submit" value="Submit" />
     </form>
 
     <div id="employees">
       <h2>Employees</h2>
+      <table style="width:100%" id="myTable">
+        <tbody>
+          <tr>
+            <td>
+              <b>First Name</b>
+            </td>
+            <td>
+              <b>Last Name</b>
+            </td>
+            <td>
+              <b>ID Number</b>
+            </td>
+            <td>
+              <b>Job title</b>
+            </td>
+            <td>
+              <b>Salary</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
       <!-- to be added via JavaScript -->
     </div>
+    <table id="salaryTable"><tr>
+      <td><b>Monthly Salary Expenditures:</b></td>
+      <td>      </td>
+    </tr>
+    </table>
   </body>
 </html>
