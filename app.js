@@ -49,5 +49,6 @@ function clearForm() {
 function calcSalary(salary) {
   totalSalary += parseInt(salary);
   console.log("Total Annual Salaries: " + totalSalary);
-  $('#salaryTable td:last').text(Math.round((totalSalary)/12));
+  var totalMonthlySalary = totalSalary/12;
+  $('#salaryTable td:last').text(totalMonthlySalary.toLocaleString("en-US", {style: 'currency', currency: 'USD'}));
 }
