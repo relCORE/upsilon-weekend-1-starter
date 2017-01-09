@@ -21,11 +21,11 @@ $(function () {
   });
 
   $('#myTable').on('click', '.deleteRow', function (event) {
-    //console.log('delete pressed');
+    console.log('delete pressed');
 
         var tdValue = $(this).parent().parent().children(".pay").text();
         calcSalary(-parseInt(tdValue));
-        // console.log(tdValue);
+         console.log(tdValue);
         $(this).closest ('tr').remove ();
 
     event.preventDefault();
@@ -48,6 +48,6 @@ function clearForm() {
 
 function calcSalary(salary) {
   totalSalary += parseInt(salary);
-  //console.log(totalSalary);
+  console.log(totalSalary);
   $('#salaryTable td:last').text(Math.round((totalSalary)/12));
 }
